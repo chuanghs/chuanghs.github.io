@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在 Ubnutu 21.10 上用 podman 架設 nexus 服務
-categories: ubuntu podman nexus 假裝自己是系統工程師
+categories: ubuntu, podman, nexus, 假裝自己是系統工程師
 ---
 
 最近因為轉換工作，寫程式從本業變成興趣，自然需要架設一些個人開發的時候需要的東西，像是放個人函式庫用的 maven 儲存庫，順便玩一下 podman（為什麼不用 docker ? 這個嘛，自然有一些原因，本來還打算直上 singularity 的，不過，那個等之後再說了)。
