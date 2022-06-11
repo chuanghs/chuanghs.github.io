@@ -24,7 +24,7 @@ maven-snapshots
 ## 全域 .m2/settings.xml 設定
 
 首先是定義連結各 repository 時使用的帳號密碼
-`
+```xml
   <servers>
     <server>
       <id>maven-public</id>
@@ -42,10 +42,10 @@ maven-snapshots
       <password>...</password>
     </server>
   </servers>
-`
+```
 
 接著是設定 mirror 以及對應的儲存庫（repository）：
-`
+```xml
   <mirrors>
     <mirror>
       <id>nexus</id>
@@ -77,14 +77,14 @@ maven-snapshots
       </pluginRepositories>
     </profile>
   </profiles>
-`
+```
 
 最後再把 profile 設為 active
-`
+```xml
   <activeProfiles>
     <activeProfile>nexus</activeProfile>
   </activeProfiles>
-`
+```
 
 全域設定部份，這樣就算完成了。
 
@@ -92,7 +92,7 @@ maven-snapshots
 
 個簣專案部份需要設定散佈的位置：
 
-`
+```xml
     <distributionManagement>
         <snapshotRepository>
             <id>maven-snapshots</id>
@@ -105,7 +105,7 @@ maven-snapshots
             <url>maven-releases url</url>
         </repository>
     </distributionManagement>
-`
+```
 
 要注意的是 distributionManagment 裡的 id 要跟 `setting.xml` `<server>` 的 id 相同。
 

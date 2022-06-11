@@ -25,7 +25,8 @@ categories: system admin
 
 執行 `nmap --script ssl-enum-ciphers -p <port> <hostname>`，會列出主機目前支援的協定與 cipher，修改後應該只剩下 TLSv1.2，而且使用的 cipher 不會有 RC4，這台主機修改後的結果是：
 
-{% highlight console %}
+
+```console
 Host is up (0.0011s latency).
 
 PORT    STATE SERVICE
@@ -35,7 +36,7 @@ PORT    STATE SERVICE
 |     ciphers: 
 |       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
 
-{% endhighlight %}
+```
 
 
 
@@ -48,18 +49,19 @@ PORT    STATE SERVICE
 
 ### Rewrite
 
-{% highlight apache %}
+
+```apache
  RewriteEngine On
  RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
  RewriteRule .* - [F]
- {% endhighlight %}
+```
 
 修改後都需要重新啟動 httpd（`systemctl restart httpd`）
 
 ### 驗證
 執行 `./test4trac.pl <hostname>`，執行結果：
 
-{% highlight console %}
+```console
 First we test for Trace...
 405 Method Not Allowed
 TRACE is not permitted.
@@ -68,7 +70,7 @@ Now we test for Track...
 501 Not Implemented
 TRACK is not implemented.
 
-{% endhighlight %}
+```
 
 驗證工具 [Test4Trac](https://blog.techstacks.com/test4trac.html)
 
@@ -90,9 +92,10 @@ TRACK is not implemented.
 
 執行 `ssh hostname -c arcfour` 應該會回應
 
-{% highlight console %}
+
+```console
 Unable to negotiate with ::1 port 22: no matching cipher found. Their offer: 3de
 s-cbc,cast128-cbc,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,
 aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,
 chacha20-poly1305@openssh.com
-{% endhighlight %}
+```
