@@ -28,9 +28,14 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "page:num"
 
 # Google Analytics
 google_analytics: UA-176554321-1
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -43,3 +48,4 @@ google_analytics: UA-176554321-1
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
