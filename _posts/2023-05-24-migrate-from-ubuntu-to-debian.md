@@ -27,3 +27,4 @@ testing 版本囉，目前 Debian 的 testing 版本的 code name 是 bookworm.
    - 過程中可能會發生因為 ubuntu 套件無法移除卡住的狀況，可以用 `dpkg --purge --force-all <package>` 的方式強制移除 Ubuntu 套件
 6. 接著移除 `/etc/apt/sources.list` 中的 Ubuntu 來源，並刪除 `/etc/apt/preferences.d/10-no-ubuntu` 檔案。
 7. 檢查是否有 `linux-image-amd64` 之類名稱的套件，Ubuntu 的 kernel 套件使用不同的名稱
+8. 最後再重複執行幾次 'apt-get autoremove' 就行了
