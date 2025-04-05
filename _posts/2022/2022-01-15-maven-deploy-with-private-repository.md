@@ -4,7 +4,7 @@ title: maven deploy 搭配私有 nexus 服務
 categories: java maven nexus 假裝自己是系統工程師
 ---
 
- 接續  [在Ubuntu 21.10 上用 podman 架設 nexus 服務]({% link _posts/2022-01-14-setup-podman-and-nexus-on-ubuntu.md %}) ，裝好 nexus 之後，當然是需要設定 maven 環境，把個人專案放到私有的 nexus 服務上頭了。
+ 接續  [在Ubuntu 21.10 上用 podman 架設 nexus 服務]({% link _posts/2022/2022-01-14-setup-podman-and-nexus-on-ubuntu.md %}) ，裝好 nexus 之後，當然是需要設定 maven 環境，把個人專案放到私有的 nexus 服務上頭了。
 
 
 nexus 3 安裝後，預設會有 maven-central, maven-public, maven-releases, maven-snapshots 這四個 maven2 的儲存庫，分別是：
