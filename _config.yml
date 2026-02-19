@@ -34,7 +34,7 @@ paginate: 10
 paginate_path: "page:num"
 
 # Google Analytics
-google_analytics: UA-176554321-1
+google_analytics: G-C6YX3CXCG0
 
 
 # Exclude from processing.
